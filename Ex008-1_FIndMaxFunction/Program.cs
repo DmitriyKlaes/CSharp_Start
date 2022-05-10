@@ -7,15 +7,14 @@ int Max(int arg1, int arg2, int arg3)
     if (arg3 > result) result = arg3;
     return result;
 }
-Console.WriteLine("Выбрать случайные 9 чисел от 1 до 100 (введите Y или N)?:");
+Console.WriteLine("Выбрать случайные 9 чисел от 1 до 99 (введите Y или N)?:");
 string choice = Console.ReadLine()!;
 int[] array = new int[9];
 while (choice.ToLower() == "y")
 {
     for (int i = 0; i < array.Length; i++)
     {
-        Random rand = new Random();
-        array[i] = rand.Next(1, 100);
+        array[i] = new Random().Next(1, 100);
     }
     break;
 }
